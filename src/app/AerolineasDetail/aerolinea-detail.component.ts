@@ -1,7 +1,12 @@
-import { OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { AerolineaService } from "../aerolinea.service";
 
+@Component({
+  selector: 'app-aerolinea-detail',
+  templateUrl: './aerolinea-detail.component.html',
+  styleUrls: ['./aerolinea-detail.component.css']
+})
 export class AerolineaDetailComponent implements OnInit {
   airline: any;
 
@@ -17,3 +22,4 @@ export class AerolineaDetailComponent implements OnInit {
     });
   }
 }
+

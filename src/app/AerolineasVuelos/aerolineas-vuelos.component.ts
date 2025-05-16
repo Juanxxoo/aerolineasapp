@@ -3,9 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { AerolineaService } from '../aerolinea.service';
 
 @Component({
-  selector: 'app-airline-flights',
-  templateUrl: './airline-flights.component.html',
-  styleUrls: ['./airline-flights.component.css']
+  selector: 'app-aerolineas-vuelos',
+  templateUrl: './aerolineas-vuelos.component.html',
+  styleUrls: ['./aerolineas-vuelos.component.css']
 })
 export class AerolineaVuelosComponent implements OnInit {
 
