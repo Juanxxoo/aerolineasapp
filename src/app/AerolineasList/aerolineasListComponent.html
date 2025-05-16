@@ -1,0 +1,19 @@
+<div class="row">
+  <div
+    class="col-md-4 mb-3"
+    *ngFor="let airline of airlines"
+  >
+    <div class="card h-100 text-white" [style.background]="airline.identityColor">
+      <div class="card-body">
+        <h5 class="card-title">{{ airline.airlineName }}</h5>
+        <button
+          class="btn btn-light"
+          [routerLink]="['/airline', airline.id]"
+        >
+          Ver detalles
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

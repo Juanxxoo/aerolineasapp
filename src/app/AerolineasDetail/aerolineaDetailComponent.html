@@ -1,0 +1,13 @@
+<div *ngIf="airline">
+  <h2>{{ airline.airlineName }}</h2>
+  <p>{{ airline.slogan }}</p>
+  <p>{{ airline.city }}, {{ airline.country }}</p>
+  <p>{{ airline.address }}</p>
+  <button
+    class="btn btn-primary"
+    [routerLink]="['/airline', airline.id, 'flights']"
+  >
+    Ver vuelos
+  </button>
+</div>
+

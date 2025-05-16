@@ -1,0 +1,28 @@
+<div *ngIf="airline">
+  <h2>{{ airline.airlineName }}</h2>
+  <p><strong>Slogan:</strong> {{ airline.slogan }}</p>
+  <p><strong>Ubicación:</strong> {{ airline.city }}, {{ airline.country }}</p>
+  <p><strong>Dirección:</strong> {{ airline.address }}</p>
+
+  <hr>
+  <h4>Vuelos:</h4>
+
+  <div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let flight of airline.flights">
+      <div class="card h-100">
+        <img [src]="flight.image" class="card-img-top" alt="Imagen del vuelo">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ flight.departureCity }} → {{ flight.arrivalCity }}
+          </h5>
+          <p class="card-text">
+            <strong>Salida:</strong> {{ flight.departureTime }} <br>
+            <strong>Duración:</strong> {{ flight.flightDuration }} horas <br>
+            <strong>Desde:</strong> {{ flight.departureAirport }} <br>
+            <strong>Hasta:</strong> {{ flight.arrivalAirport }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
